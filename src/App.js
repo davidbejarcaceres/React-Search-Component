@@ -1,7 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SearchComponent from './components/SearchComponent';
 
 const items = [
   "Severian",
@@ -23,12 +22,13 @@ const items = [
 
 function App() {
   const SearchComponentLazy = lazy(() => import('./components/SearchComponent'));
+  const SearchFilterComponentLazy = lazy(() => import('./components/SearchListFilter'));
 
   return (
     <div className="App">
       <header className="App-header">
         <Suspense fallback={<div>Loading...</div>}>
-          <SearchComponentLazy items={items}/>
+          <SearchFilterComponentLazy items={items}/>
         </Suspense>
       </header>
     </div>

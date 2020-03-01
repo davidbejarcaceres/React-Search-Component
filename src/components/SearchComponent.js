@@ -5,8 +5,8 @@ import "./style.css"
 
 const renderItem = (value, index) => {    
     return(
-        <div className={"list-item"}>
-            <p key={value}>{index}.  {value}</p>
+        <div key={index} className={"list-item"}>
+            <p>{index}.  {value}</p>
         </div>
     );
 };
