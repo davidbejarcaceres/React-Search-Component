@@ -1,0 +1,9 @@
+.list-item {
+    font-size: medium;
+}
+
+#standard-search{
+    font-size: x-large;
+    color: white;
+    background-color: rgba(90, 90, 90, 0.2);
+}
