@@ -1,23 +1,21 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import TextField from "@material-ui/core/TextField";
-import "./style.css";
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
+import TextField from '@material-ui/core/TextField';
+import './style.css';
 
-const renderItem = (value, index) => {
-  return (
-    <div key={index} className={"list-item"}>
-      <p>
-        {index}. {value}
-      </p>
-    </div>
-  );
-};
+const renderItem = (value, index) => (
+  <div key={index} className={'list-item'}>
+    <p>
+      {index}. {value}
+    </p>
+  </div>
+);
 
-const SearchListFilter = ({ items }) => {
+const SearchListFilter = ({items}) => {
   const [lista, setlista] = useState(items);
 
   return (
-    <div className={"search-component"}>
+    <div className={'search-component'}>
       Search component
       <br />
       <TextField
